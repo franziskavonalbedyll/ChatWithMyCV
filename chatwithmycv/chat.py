@@ -11,19 +11,25 @@ Example:
 """
 
 
+import os
+
 import streamlit as st
 from ask import ask_question
 from build_index import create_embeddings
+from dotenv import load_dotenv
 
 CV_EXPLANATIONS_PATH = "../data/cv_explanations.txt"
 DB_DIR = "../embeddings_database"
 
+load_dotenv()
 
 embeddings = create_embeddings(CV_EXPLANATIONS_PATH, DB_DIR)
 
-st.set_page_config(page_title="Chat with my CV", page_icon=":speech_balloon:")
-st.subheader("Ask me anything about my CV")
-st.subheader("")
+st.set_page_config(
+    page_title=f"{os.getenv('FULL_NAME')} - Chat with my CV",
+    page_icon=":speech_balloon:",
+)
+st.subheader(f"{os.getenv('FULL_NAME')} - Chat with my CV")
 prompt_box = st.empty()
 st.write("")
 answer_box = st.empty()
@@ -34,7 +40,7 @@ if "messages" not in st.session_state.keys():
         {
             "role": "assistant",
             "content": "Hi, I'm here to answer "
-            "your questions regarding my CV. "
+            f"your questions regarding {os.getenv('FIRST_NAME')}'s CV. "
             "Ask me anything!",
         }
     ]

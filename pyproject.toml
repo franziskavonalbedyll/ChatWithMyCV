@@ -15,7 +15,7 @@ tiktoken = "^0.5.1"
 streamlit = "^1.27.2"
 streamlit-chat = "^0.1.1"
 azure-storage-blob = "^12.18.2"
-pysqlite3 = "^0.5.2"
+pysqlite3-binary = "^0.5.2.post1"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.4.0"

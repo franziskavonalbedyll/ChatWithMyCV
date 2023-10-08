@@ -16,18 +16,13 @@ from langchain.schema.document import Document
 from langchain.vectorstores import Chroma
 
 
-def create_embeddings(path: str, db_dir: str) -> None:
+def create_embeddings(doc: Document, db_dir: str) -> None:
     """Create embeddings from document.
 
     :param path: path to the document
     :param db_dir: directory to store the database
     :return: None
     """
-    with open(path, "r") as file:
-        content = file.read()
-
-    doc = Document(page_content=content, metadata={"path": path})
-
     # With Chroma we can store and retrieve word embeddings in a database
     embedding_database = Chroma(
         "cv_embeddings",

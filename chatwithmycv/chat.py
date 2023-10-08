@@ -15,12 +15,10 @@ from ask import ask_question
 from build_index import create_embeddings
 from download_data import download
 
-CV_EXPLANATIONS_PATH = "../data/cv_explanations.txt"
 DB_DIR = "../embeddings_database"
 
-download()
-
-embeddings = create_embeddings(CV_EXPLANATIONS_PATH, DB_DIR)
+cv_explanation_data = download()
+embeddings = create_embeddings(cv_explanation_data, DB_DIR)
 
 st.set_page_config(
     page_title=f"{st.secrets['FULL_NAME']} - Chat with my CV",

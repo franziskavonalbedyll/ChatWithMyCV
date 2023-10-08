@@ -11,11 +11,15 @@ Example:
 """
 
 
+import sys
+
 import streamlit as st
 from ask import ask_question
 from build_index import create_embeddings
 from download_data import download
 
+__import__("pysqlite3")
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
 DB_DIR = "../embeddings_database"
 
 cv_explanation_data = download()

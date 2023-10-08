@@ -1,5 +1,6 @@
 
 # ChatWithMyCV
+![img.png](img.png)
 
 Welcome to **ChatWithMyCV**! This project allows you to interact with a chatbot, enabling you to ask questions about a CV (Curriculum Vitae) using Streamlit and the OpenAI API.
 

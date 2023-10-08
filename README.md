@@ -89,7 +89,3 @@ Streamlit is an open-source Python library that makes it easy to create web apps
 ## Contributing
 
 Feel free to fork the project, open a PR, or submit issues for any bugs found or enhancements you have in mind. Let's make **ChatWithMyCV** better, together!
-
----
-
-This README provides a comprehensive guide to get started with your project, from prerequisites to running the app, and gives a brief overview of the development tools used. Adjust as needed for your project specifics!

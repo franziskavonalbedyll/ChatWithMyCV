@@ -13,13 +13,11 @@ Example:
     >>> answer = ask_question(question, embeddings)
     >>> print(answer)
 """
-from dotenv import load_dotenv
 from langchain.chains import ConversationalRetrievalChain
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.vectorstores import Chroma
 
-load_dotenv()  # load OpenAI API key from .env file
 MEMORY = ConversationBufferMemory(
     memory_key="chat_history", return_messages=True
 )

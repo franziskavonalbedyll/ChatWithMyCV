@@ -6,3 +6,4 @@ embeddings_database
 __pycache__/
 poetry.lock
 todos.txt
+.streamlit/

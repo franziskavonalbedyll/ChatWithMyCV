@@ -31,9 +31,9 @@ Welcome to **ChatWithMyCV**! This project allows you to interact with a chatbot,
 1. **Install Poetry**: Poetry is a dependency manager for Python. If you haven't installed it yet, you can do so by following the instructions [here](https://python-poetry.org/docs/#installation).
 
 2. **Install Dependencies**: Navigate to the project directory and run the following command to install the project dependencies:
-    ```bash
-    poetry install
-    ```
+```bash
+poetry install
+```
 
 ### Running the App
 
@@ -46,9 +46,9 @@ poetry shell
 cd chatwithmycv
 ```
 3. **Run the app using streamlit**
-    ```bash
-    streamlit run chat.py
-    ```
+```bash
+streamlit run chat.py
+```
 
 ## Development Tools
 ### Pre-commit

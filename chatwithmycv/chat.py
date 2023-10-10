@@ -43,7 +43,10 @@ if "messages" not in st.session_state.keys():
             "role": "assistant",
             "content": "Hi, I'm here to answer "
             f"your questions regarding {st.secrets['FIRST_NAME']}'s CV. "
-            "Ask me anything!",
+            f"Please note that while I strive to provide accurate and helpful "
+            "responses, I am a LLM and thus not infallible. "
+            "Always feel free to double-check any "
+            "information directly with her! ",
         }
     ]
 

@@ -19,7 +19,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain.vectorstores import Chroma
 
 MEMORY = ConversationBufferMemory(
-    memory_key="chat_history", return_messages=True
+    memory_key="chat_history", return_messages=True, output_key="answer"
 )
 
 
@@ -32,7 +32,10 @@ def ask_question(question: str, embeddings: Chroma) -> str:
     """
     chat = ChatOpenAI()
     chain = ConversationalRetrievalChain.from_llm(
-        llm=chat, retriever=embeddings.as_retriever(), memory=MEMORY
+        llm=chat,
+        retriever=embeddings.as_retriever(),
+        memory=MEMORY,
+        max_tokens_limit=4096,
     )
 
     response = chain({"question": question})
